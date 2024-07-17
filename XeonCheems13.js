@@ -613,12 +613,12 @@ return arr[Math.floor(Math.random() * arr.length)]
                if (!('online' in setting)) setting.online = true 
                if (!('autosticker' in setting)) setting.autosticker = false 
                if (!('autodownload' in setting)) setting.autodownload = false 
-               if (!('autobio' in setting)) setting.autobio = false 
+               if (!('autobio' in setting)) setting.autobio = true 
                if (!('autosiby' in setting)) setting.autosiby = true 
                if (!('autoread' in setting)) setting.autoread = false
                if (!('autorecordtype' in setting)) setting.autorecordtype = false
                if (!('autorecord' in setting)) setting.autorecord = false
-               if (!('autotype' in setting)) setting.autotype = false
+               if (!('autotype' in setting)) setting.autotype = true
                if (!('autoblocknum' in setting)) setting.autoblocknum = false
                if (!('onlyindia' in setting)) setting.onlyindia = false
                if (!('onlyindo' in setting)) setting.onlyindo = false
@@ -632,7 +632,7 @@ return arr[Math.floor(Math.random() * arr.length)]
                online: true,
                autosticker: false,
                autodownload: false,
-               autobio: false,
+               autobio: true,
                autosiby: true,
                autoread: false,
                autoblocknum: false,
@@ -642,7 +642,7 @@ return arr[Math.floor(Math.random() * arr.length)]
                onlypc: false,
                autorecordtype: false,
                autorecord: false,
-               autotype: false,
+               autotype: true,
                watermark: {
                   packname: global.packname, 
                   author: global.author
@@ -958,11 +958,18 @@ function formatDuration(ms) {
      XeonBotInc.sendMessage(m.chat, { react: { text: "❤️",key: m.key}})
 	}
 
-	//if (db.data.settings[botNumber].autobio) {
-            XeonBotInc.updateProfileStatus(`${botname} Have Been Running For ${runtime(process.uptime())}`).catch(_ => _)
+	if (db.data.settings[botNumber].autobio) {
+            //XeonBotInc.updateProfileStatus(`${botname} Have Been Running For ${runtime(process.uptime())}`).catch(_ => _)
+            XeonBotInc.updateProfileStatus(`${botname} ${timeyann}`).catch(_ => _)
 
-     //  }
-
+       }
+     if (db.data.settings[botNumber].autotype) {
+             	XeonBotInc.sendPresenceUpdate('composing', m.chat)
+     }
+     
+     if (db.data.settings[botNumber].autorecord) {
+             	XeonBotInc.sendPresenceUpdate('recording', m.chat)
+     }
         // Grup Only
         if (!m.isGroup && !XeonTheCreator && db.data.settings[botNumber].onlygrub ) {
         	if (isCommand){
