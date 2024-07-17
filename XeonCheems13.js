@@ -610,15 +610,15 @@ return arr[Math.floor(Math.random() * arr.length)]
             if (setting) {
                if (!('totalhit' in setting)) setting.totalhit = 0
                if (!('totalError' in setting)) setting.totalError = 0
-               if (!('online' in setting)) setting.online = true 
+               if (!('online' in setting)) setting.online = false 
                if (!('autosticker' in setting)) setting.autosticker = false 
                if (!('autodownload' in setting)) setting.autodownload = false 
-               if (!('autobio' in setting)) setting.autobio = true 
-               if (!('autosiby' in setting)) setting.autosiby = true 
+               if (!('autobio' in setting)) setting.autobio = false 
+               if (!('autosiby' in setting)) setting.autosiby = false 
                if (!('autoread' in setting)) setting.autoread = false
                if (!('autorecordtype' in setting)) setting.autorecordtype = false
                if (!('autorecord' in setting)) setting.autorecord = false
-               if (!('autotype' in setting)) setting.autotype = true
+               if (!('autotype' in setting)) setting.autotype = false
                if (!('autoblocknum' in setting)) setting.autoblocknum = false
                if (!('onlyindia' in setting)) setting.onlyindia = false
                if (!('onlyindo' in setting)) setting.onlyindo = false
@@ -629,10 +629,10 @@ return arr[Math.floor(Math.random() * arr.length)]
             } else global.db.data.settings[botNumber] = {
                totalhit: 0,
                totalError: 0,
-               online: true,
+               online: false,
                autosticker: false,
                autodownload: false,
-               autobio: true,
+               autobio: false,
                autosiby: true,
                autoread: false,
                autoblocknum: false,
@@ -642,7 +642,7 @@ return arr[Math.floor(Math.random() * arr.length)]
                onlypc: false,
                autorecordtype: false,
                autorecord: false,
-               autotype: true,
+               autotype: false,
                watermark: {
                   packname: global.packname, 
                   author: global.author
