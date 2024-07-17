@@ -20,7 +20,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/restart', (req, res) => {
-  process.exit(0);
+  res.send('Bot Will Restarting In 5 Second');
+setTimeout(() => {
+process.exit(0);
+}, 5000);
 });
 
 app.listen(PORT, () => {
