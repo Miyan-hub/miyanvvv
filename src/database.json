@@ -2657,12 +2657,12 @@
   },
   "settings": {
     "6283890667327@s.whatsapp.net": {
-      "totalhit": 393,
+      "totalhit": 1000,
       "totalError": 0,
       "online": false,
       "autosticker": false,
       "autodownload": false,
-      "autobio": false,
+      "autobio": true,
       "autoread": false,
       "autoblocknum": false,
       "onlyindia": false,
@@ -2671,7 +2671,7 @@
       "onlypc": false,
       "autorecordtype": false,
       "autorecord": false,
-      "autotype": false,
+      "autotype": true,
       "watermark": {
         "packname": "【﻿Ｍｉｙａｎ　Ｉｎｃ．】",
         "author": ""
