@@ -11,25 +11,6 @@ const {
    spawn
 } = require('child_process')
 const path = require('path')
-const express = require('express');
-const app = express();
-const PORT = 80
-
-app.get('/', (req, res) => {
-  res.send('Bot Is Running...');
-});
-
-app.get('/restart', (req, res) => {
-  res.send('Bot Will Restarting In 5 Second');
-setTimeout(() => {
-process.exit(0);
-}, 5000);
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
-
 function start() {
    let args = [path.join(__dirname, 'main.js'), ...process.argv.slice(2)]
    console.log([process.argv[0], ...args].join('\n'))
