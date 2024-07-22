@@ -2671,7 +2671,7 @@
       "onlypc": false,
       "autorecordtype": false,
       "autorecord": false,
-      "autotype": true,
+      "autotype": false,
       "watermark": {
         "packname": "【﻿Ｍｉｙａｎ　Ｉｎｃ．】",
         "author": ""
