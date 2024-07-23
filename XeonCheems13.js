@@ -270,7 +270,6 @@ module.exports = XeonBotInc = async (XeonBotInc, m, msg, chatUpdate, store) => {
        //group
         const isGroup = m.key.remoteJid.endsWith('@g.us')
         const groupMetadata = m.isGroup ? await XeonBotInc.groupMetadata(m.chat).catch(e => {}) : ''
-        //const groupName = m.isGroup ? groupMetadata.subject : ''
         const participants = m.isGroup ? await groupMetadata.participants : ''
         const groupAdmins = m.isGroup ? await getGroupAdmins(participants) : ''
         const isGroupAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
@@ -3178,6 +3177,20 @@ break
                 const atnm = swn.split("|")[1] ? swn.split("|")[1] : m.chat
                 XeonBotInc.sendMessage(atnm, {
                     text: pcknm
+                })
+                }
+            break
+            case 'sendtag': {
+                if (!XeonTheCreator) return XeonStickOwner()
+                const swn = args.join(" ")
+                const pcknm = swn.split("|")[0]
+                const atnm = swn.split("|")[1] ? swn.split("|")[1] : m.chat
+                        let mekio = m.isGroup ? await XeonBotInc.groupMetadata(atnm).catch(e => {}) : ''
+        let mariok = m.isGroup ? await mekio.participants : ''
+
+                XeonBotInc.sendMessage(atnm, {
+                    text: pcknm,
+                    mentions: mariok.map(a => a.id)
                 })
                 }
             break
