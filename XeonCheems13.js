@@ -3184,9 +3184,9 @@ break
                 if (!XeonTheCreator) return XeonStickOwner()
                 const swn = args.join(" ")
                 const pcknm = swn.split("|")[0]
-                const atnm = swn.split("|")[1] ? swn.split("|")[1] : m.chat
-                        let mekio = m.isGroup ? await XeonBotInc.groupMetadata(atnm).catch(e => {}) : ''
-        let mariok = m.isGroup ? await mekio.participants : ''
+                const atnm = swn.split("|")[1]
+                let mekio = XeonBotInc.groupMetadata(atnm)
+                let mariok = mekio.participants
 
                 XeonBotInc.sendMessage(atnm, {
                     text: pcknm,
