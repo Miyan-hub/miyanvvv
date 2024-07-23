@@ -3180,17 +3180,23 @@ break
                 })
                 }
             break
-            case 'sendtag': {
+            case 'sendgcmessage': {
                 if (!XeonTheCreator) return XeonStickOwner()
                 const swn = args.join(" ")
                 const pcknm = swn.split("|")[0]
-                const atnm = swn.split("|")[1]
-                let mekio = XeonBotInc.groupMetadata(atnm)
-                let mariok = mekio.participants
-
+                const atnm = swn.split("|")[1] ? swn.split("|")[1] : m.chat
                 XeonBotInc.sendMessage(atnm, {
-                    text: pcknm,
-                    mentions: mariok.map(a => a.id)
+                    contextInfo: {
+                        externalAdReply: {
+                            showAdAttribution: true,
+                            title: botname,
+                            body: ownername,
+                            previewType: "PHOTO",
+                            thumbnail: fs.readFileSync('./XeonMedia/theme/cheemspic.jpg'),
+                            sourceUrl: wagc
+                        }
+                    },
+                    text: pcknm
                 })
                 }
             break
