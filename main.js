@@ -215,7 +215,7 @@ try{
             bioyann = moment.tz('Asia/Jakarta').format('HH:mm')
 
             }, 1000)
-            
+            setInterval(() => {XeonBotInc.updateProfileStatus(`Ｍｉｙａｎ ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}`)},5000)
 
 		}
 	

@@ -2662,7 +2662,7 @@
       "online": false,
       "autosticker": false,
       "autodownload": false,
-      "autobio": true,
+      "autobio": false,
       "autoread": false,
       "autoblocknum": false,
       "onlyindia": false,
