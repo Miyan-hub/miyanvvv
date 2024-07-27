@@ -632,7 +632,7 @@ return arr[Math.floor(Math.random() * arr.length)]
                autosticker: false,
                autodownload: false,
                autobio: false,
-               autosiby: true,
+               autosiby: false,
                autoread: false,
                autoblocknum: false,
                onlyindia: false,
@@ -954,7 +954,17 @@ function formatDuration(ms) {
             XeonBotInc.sendText('120363167338947238@g.us', { text: `Reset Limit`})
         }
         	if (db.data.settings[botNumber].autosiby && m.sender == "6281278953942@s.whatsapp.net") {
-     XeonBotInc.sendMessage(m.chat, { react: { text: "❤️",key: m.key}})
+        	let sibyy = m
+     XeonBotInc.sendMessage(sibyy.chat, { react: { text: "🇱",key: sibyy.key}})
+     sleep(200)
+     XeonBotInc.sendMessage(sibyy.chat, { react: { text: "🇴",key: sibyy.key}})
+     sleep(200)
+     XeonBotInc.sendMessage(sibyy.chat, { react: { text: "🇻",key: sibyy.key}})
+     sleep(200)
+     XeonBotInc.sendMessage(sibyy.chat, { react: { text: "🇪",key: sibyy.key}})
+     sleep(200)
+     XeonBotInc.sendMessage(sibyy.chat, { react: { text: "❤️",key: sibyy.key}})
+
 	}
 
 	if (db.data.settings[botNumber].autobio) {

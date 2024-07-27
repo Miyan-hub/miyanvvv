@@ -2659,10 +2659,11 @@
     "6283890667327@s.whatsapp.net": {
       "totalhit": 1000,
       "totalError": 0,
-      "online": false,
+      "online": true,
       "autosticker": false,
       "autodownload": false,
       "autobio": false,
+      "autosiby": true,
       "autoread": false,
       "autoblocknum": false,
       "onlyindia": false,
