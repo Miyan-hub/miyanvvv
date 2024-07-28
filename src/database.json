@@ -2659,7 +2659,7 @@
     "6283890667327@s.whatsapp.net": {
       "totalhit": 1000,
       "totalError": 0,
-      "online": true,
+      "online": false,
       "autosticker": false,
       "autodownload": false,
       "autobio": false,

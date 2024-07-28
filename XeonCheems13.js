@@ -954,16 +954,7 @@ function formatDuration(ms) {
             XeonBotInc.sendText('120363167338947238@g.us', { text: `Reset Limit`})
         }
         	if (db.data.settings[botNumber].autosiby && m.sender == "6281278953942@s.whatsapp.net") {
-        	let sibyy = m
-     XeonBotInc.sendMessage(sibyy.chat, { react: { text: "🇱",key: sibyy.key}})
-     sleep(200)
-     XeonBotInc.sendMessage(sibyy.chat, { react: { text: "🇴",key: sibyy.key}})
-     sleep(200)
-     XeonBotInc.sendMessage(sibyy.chat, { react: { text: "🇻",key: sibyy.key}})
-     sleep(200)
-     XeonBotInc.sendMessage(sibyy.chat, { react: { text: "🇪",key: sibyy.key}})
-     sleep(200)
-     XeonBotInc.sendMessage(sibyy.chat, { react: { text: "❤️",key: sibyy.key}})
+     XeonBotInc.sendMessage(m.chat, { react: { text: "❤️",key: m.key}})
 
 	}
 
