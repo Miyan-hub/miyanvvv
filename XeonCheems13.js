@@ -982,8 +982,9 @@ function formatDuration(ms) {
 	         return replygcxeon("Hello buddy! if you want to use this bot, please chat the bot in private chat")
 	     }
 	}
-            if (!XeonTheCreator && XeonBotInc.public == false) {
-            if (m.chat != "120363141024244851@g.us") return
+            if (!XeonTheCreator && XeonBotInc.public == true) {
+            // if (m.chat != "120363141024244851@g.us") return
+return
             }
         if (db.data.settings[botNumber].online) {
         	XeonBotInc.sendPresenceUpdate('unavailable', from)

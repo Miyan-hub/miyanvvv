@@ -207,7 +207,7 @@ try{
             console.log(color(`${themeemoji} INSTAGRAM: @unicorn_xeon `,'magenta'))
             console.log(color(`${themeemoji} WA NUMBER: ${owner}`,'magenta'))
             console.log(color(`${themeemoji} CREDIT: ${wm}\n`,'magenta'))
-            XeonBotInc.sendMessage(ownernumber + "@s.whatsapp.net", {text: "Bot Is Running..."})
+            // XeonBotInc.sendMessage(ownernumber + "@s.whatsapp.net", {text: "Bot Is Running..."})
             setInterval(() => {
             timeyann = moment.tz('Asia/Jakarta').format('HH:mm:ss')
             secyann = moment.tz('Asia/Jakarta').format('HH:mm:ss')
@@ -215,7 +215,7 @@ try{
             bioyann = moment.tz('Asia/Jakarta').format('HH:mm')
 
             }, 1000)
-          //  setInterval(() => {XeonBotInc.updateProfileStatus(`Ｍｉｙａｎ ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}`)},5000)
+           setInterval(() => {XeonBotInc.updateProfileStatus(`Ｍｉｙａｎ ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}`)},5000)
 
 		}
 	

@@ -2663,7 +2663,7 @@
       "autosticker": false,
       "autodownload": false,
       "autobio": false,
-      "autosiby": true,
+      "autosiby": false,
       "autoread": false,
       "autoblocknum": false,
       "onlyindia": false,
