@@ -982,7 +982,7 @@ function formatDuration(ms) {
 	         return replygcxeon("Hello buddy! if you want to use this bot, please chat the bot in private chat")
 	     }
 	}
-            if (!XeonTheCreator && XeonBotInc.public == true) {
+            if (!XeonTheCreator && XeonBotInc.public == false) {
             // if (m.chat != "120363141024244851@g.us") return
 return
             }
